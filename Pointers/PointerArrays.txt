@@ -1,0 +1,44 @@
+/*the following program is for Lab Assignment 2.
+
+Description: enter elements into the array of Gallons and Miles. then calculate the elements of array mpg by using the formula
+mpg = miles / gallons and then display the result of the array out to screen
+Name: Eric Strong C15708709
+Date: 07/12/2015
+Platform: Windows 8.1 Codeblocks
+*/
+#include<stdio.h>
+#define SIZE 5
+main()
+{
+    //initialize arrays so they do not have random data
+    float gallons[SIZE]= {0};
+    float miles[SIZE]= {0};
+    float mpg [SIZE]={0};
+    
+
+    int i;
+    //prompt user to enter data to the arrays
+    printf("Enter %d Values to the %s array\n",SIZE, "Gallons");
+
+    //populating the arrays Gallons and Miles
+    for(i=0;i<SIZE;i++)
+    {
+        scanf("%f", &*(gallons + i)); // elements for the array Gallons
+    }//end for loop
+
+    printf("Enter %d Values to the %s array\n",SIZE, "Miles");
+    for(i=0;i<5;i++)
+    {
+        scanf("%f", &*(miles + i)); // elements for the array Gallons
+
+        //calculating the mpg values and populating the array
+        *(mpg + i) = *(miles + i) / *(gallons + i);
+    }//end for loop
+
+    // displaying the contents of the array mpg
+    for(i=0;i<SIZE;i++)
+    {
+     printf("Element %d of the %s array is %.3f\n",i, "Mpg", *(mpg + i));
+    }//end for loop
+
+}//end main()
