@@ -1,0 +1,31 @@
+/*a program to count how many people are allowed into the cinema based on their age and the max capacity*/
+#include<stdio.h>
+main()
+{
+    int max = 0;
+
+    int age = 0;
+    printf("how old are you?\n");
+
+   do
+    {
+        printf("AGE:");
+        scanf("%d",&age);
+
+        if(age > 18)
+        {
+            max ++;
+            printf("entry granted\n");
+
+        }//end if
+        else
+        {
+            printf("Under age sorry no entry.\n");
+        }//end else
+
+
+    }//end do
+    while(max < 10);
+     printf("Cinema is at full capacity of %d",max);
+}//end main
+
