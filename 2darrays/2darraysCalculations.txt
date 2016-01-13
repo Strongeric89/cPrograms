@@ -1,0 +1,51 @@
+/*2d arrays with calculations between both arrays to the 3rd */
+#include<stdio.h>
+#define ROW 3
+#define COL 4
+
+
+main()
+{
+    int numbers1[ROW][COL];
+    int numbers2[ROW][COL];
+    int numbers3[ROW][COL];
+
+    int i,j;
+    printf("POPULATE THE ARRAYS\n");
+
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+            printf("numbers1 (%d,%d) : ",i,j);
+            scanf("%d", &numbers1[i][j]); // populating the array
+
+        }// end inner for loop
+
+    }// end outter for loop
+
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+            printf("numbers2 (%d,%d) : ",i,j);
+            scanf("%d", &numbers2[i][j]); // populating the array
+
+        }// end inner for loop
+
+    }//out loop
+
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+        numbers3[i][j]= numbers1[i][j] * numbers2[i][j];
+        printf("\nElement %d,%d of numbers3 = %d\n",i,j,numbers3[i][j]);
+        }//end inner loop
+    }//end outter loop
+
+
+
+}//endmain
+
+
