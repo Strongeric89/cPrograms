@@ -1,0 +1,25 @@
+/*the following program is a switch case, if 1 is entered the letters one are printed and so on up to number 5*/
+#include<stdio.h>
+main()
+{
+    int num =0;
+
+    printf("Please enter a number 1 to 5: ");
+    scanf("%d",&num);
+
+    switch(num)
+    {
+        case 1: printf("\nOne %d", num); break;
+
+        case 2: printf("\nTwo %d",num); break;
+
+        case 3: printf("\nThree %d",num); break;
+
+        case 4: printf("\nfour %d",num); break;
+
+        case 5: printf("\nfive %d",num); break;
+
+        default: printf("You did not enter a valid number!");
+    }
+
+}//end main()
