@@ -1,0 +1,25 @@
+/*Ask user to enter time in ireland, and display the time moscow -5, washington +3, beigjing +7*/
+#include<stdio.h>
+main()
+{
+    int hour,min;
+    char dot = ':';
+    int moscow,wash,bei;
+
+    printf("enter the time:");
+    scanf("%d%d",&hour,&min);
+
+    hour = hour - 12;
+    moscow = hour - 5;
+    wash = hour + 3;
+    bei = hour + 7;
+
+
+
+    printf("the time in Ireland is %d%c%d\n",hour,dot,min);
+    printf("the time in Moscow is %d%c%d\n",moscow,dot,min);
+     printf("the time in washington is %d%c%d\n",wash,dot,min);
+      printf("the time in Beijing is %d%c%d\n",bei,dot,min);
+
+
+}//end main();
