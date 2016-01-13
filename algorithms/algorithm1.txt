@@ -1,0 +1,47 @@
+#include<stdio.h>
+main()
+{
+    int num=0;
+    int counter=0;
+
+
+
+    printf("Please enter a number:  ");
+    scanf("\n%d", &num);
+
+    printf("\nInitial value is %d\n", num);
+
+
+
+
+
+    do{
+            int test= num % 2;
+
+        if(test==1){
+            num=num *3 + 1;
+            printf("\nNext Value is %d", num);
+            counter ++;
+
+        }//end if
+
+        else if(test==0){
+            num=num/2;
+            printf("\nNext value is %d",num);
+            counter ++;
+        }//end else if
+
+        else{
+                num=1;
+
+            printf("ERROR: TRY AGAIN!");
+        }//end else
+
+
+
+    }//end while loop
+    while(num!=1);
+    printf("\n\nFinally number 1!....The number of steps is %d",counter);
+
+
+}// end main())
