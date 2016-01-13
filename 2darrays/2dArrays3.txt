@@ -1,0 +1,37 @@
+/*This program is for Question 5 lab 7, 2D array each with 5 elements, then multiply the corresponidng elements*/
+#include<stdio.h>
+#define ROW 2
+#define COL 2
+main()
+{
+    int numbers[ROW][COL] = {0};
+    int i,j;
+
+    int totalOfROW=1;
+
+    printf("Populate the Array %s", "numbers");
+
+    //populating the 2d array
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+        scanf("%d", &numbers[i][j]);
+
+
+        totalOfROW = totalOfROW * numbers[i][j];
+
+        }//end inner loop
+    }//end outter loop
+
+  for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+           printf("%d*", numbers[i][j]);
+        }//end inner loop
+    }//end outter loop
+            printf(" = %d", totalOfROW);
+
+
+}//end main()
