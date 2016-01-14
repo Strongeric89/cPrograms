@@ -1,0 +1,28 @@
+/*This program is Q2 for lab 6. read in 3 tempretures and covert them to celcius and output both readings*/
+#include<stdio.h>
+#define SIZE 3
+main()
+{
+    int i,j;
+    float fahren[SIZE];
+    float celcius[SIZE];
+
+    printf("Please enter %d tempretures\n", SIZE);
+    //read in data and convert and copy to the celcius array
+    for(i=0;i<SIZE;i++)
+    {
+        scanf("%f\n", &fahren[i]);
+        celcius[i] = (fahren[i] - 32.0) * (5.0/9.0);
+
+    }//end for loop
+    //display the contents of both arrays
+    for(i=0,j=1;i<SIZE,j<4;i++,j++)
+
+    {
+
+        printf("Tempreture %d in Fahrenheit was %.2f ^f \nTempreture %d in Celcius was %.2f ^C\n\n",j,fahren[i],j,celcius[i]);
+
+    }// end for loop
+
+
+}//end main()
