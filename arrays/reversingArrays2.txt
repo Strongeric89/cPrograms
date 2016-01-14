@@ -1,0 +1,27 @@
+/*This program is lab 6 q 4. populate an array. copy contents to a second array in reverse order and output*/
+#include<stdio.h>
+#define SIZE 5
+
+
+main()
+{
+    int i,j;
+    int One[SIZE];
+    int Two[SIZE];
+
+    printf("Enter %d numbers to array\n", SIZE);
+    //populate the array and sort order
+
+    for(i=0,j=4;i<SIZE;i++,j--)
+    {
+        scanf("%d", &One[i]);
+        Two[j]=One[i];
+    }//end for
+
+
+    for(i=0;i<SIZE;i++)
+    {
+        printf("the element %d of array TWO is %d\n",i, Two[i]);
+    }//end for
+
+}//end main()
