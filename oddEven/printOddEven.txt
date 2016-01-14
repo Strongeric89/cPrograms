@@ -1,0 +1,35 @@
+/*This is question 6 and 7 lab 5 for the study group purposes print the odd and even numbers between 1-100*/
+#include <stdio.h>
+main()
+{
+    int i=0;
+    int sumOdd=0;
+    int sumEven=0;
+    printf("all the EVEN numbers between 1-100 are:\n");
+    for(i=1;i<=100;i++)
+    {
+        if(i % 2==0)
+        {
+            sumEven= sumEven + i;
+           printf("%d,",i);
+        }//end if
+
+    }//end for loop
+     printf("\nThe sum of all Even numbers %d" , sumEven);
+     printf("\nall the ODD numbers between 1-100 are:\n");
+
+     for(i=1;i<=100;i++)
+    {
+        if(i % 2==1)
+        {
+        sumOdd= sumOdd + i;
+           printf("%d,",i);
+
+        }//end if
+
+    }//end for loop
+    printf("The sum of all odd numbers %d" , sumOdd);
+
+
+
+}//end main()
