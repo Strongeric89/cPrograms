@@ -1,0 +1,39 @@
+/*this program is for lab 6 q3 this will ask user to enter 4 numbers. but will also copy the numbers to another array and sort them */
+#include<stdio.h>
+# define SIZE 4
+main()
+{
+    int i,j;
+    int numbers[SIZE];
+    int temp;
+
+    printf("Please enter %d numbers\n",SIZE);
+    //populating the array
+    for(i=0;i<SIZE;i++)
+    {
+       scanf("%d", &numbers[i]);
+
+    }//end for
+    //displaying the array
+    for(i=0,j=1;i<SIZE,j<5;i++,j++)
+    {
+       printf("The %d number is %d\n",j, numbers[i]);
+    }// end for
+    //sorting the array
+    temp=numbers[0];
+    numbers[0]=numbers[1];
+    numbers[1]=temp;
+
+     temp=numbers[2];
+    numbers[2]=numbers[3];
+    numbers[3]=temp;
+
+     //displaying the SORTED array
+     printf("\n After sorting.....\n");
+    for(i=0,j=1;i<SIZE,j<5;i++,j++)
+    {
+       printf("The %d number is %d\n",j, numbers[i]);
+    }// end for
+
+
+}//end main()
