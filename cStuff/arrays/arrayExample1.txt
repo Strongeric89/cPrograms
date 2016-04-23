@@ -1,0 +1,25 @@
+/*The following program populates an array by the symbolic name number then prints the location of its element and contents*/
+#include<stdio.h>
+#define SIZE 5
+main()
+{
+    int numbers1[SIZE];
+    int numbers2[SIZE];
+    int i;
+
+    printf("Enter %d numbers: ", SIZE);
+
+    for(i=0;i<SIZE;i++)
+    {
+        scanf("%d", &numbers1[i]);
+
+        numbers2[i]=numbers1[i];
+
+    }//endfor loop
+    //display contents of numbers 2 array
+    for(i=0;i<SIZE;i++)
+    {
+        printf("The element %d of numbers 2 is %d\n", i , numbers2[i]);
+    }//end for loop 2
+
+}//end main ()

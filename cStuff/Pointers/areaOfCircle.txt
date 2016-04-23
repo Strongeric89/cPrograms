@@ -1,0 +1,30 @@
+/*using pointer notation calculating the area of a triangle*/
+#include<stdio.h>
+main()
+{
+    float radius = 0;
+    float DI= 0;
+    float area= 0;
+
+    float *ptrRadius = &radius;
+    float *ptrDI = &DI;
+    float *ptrArea = &area;
+
+    printf("what is the radius of the circle:\n");
+
+    scanf("%f", &*ptrRadius);
+
+    DI = radius * 2;
+    area = radius * 3.14;
+
+    printf("The Diametre of circle is %f and Area of circle is %f", *ptrDI, *ptrArea);
+
+
+
+
+
+
+
+
+
+}//end main()

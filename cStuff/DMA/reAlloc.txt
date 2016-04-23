@@ -1,0 +1,74 @@
+/*the following program is to re size the memory allocation, Realloc is only used after a malloc or calloc is used and you need to re size the memory allocation*/
+#include<stdio.h>
+#include<stdlib.h>
+main()
+{
+    int *ptr;
+    int i, elements, size_of_bytes;
+
+    int *temp;
+
+
+
+
+    printf("Enter the amount of elements needed: ");
+    scanf("%d", &elements);
+
+    size_of_bytes = elements * sizeof(int);
+    ptr = (int*) malloc (size_of_bytes);
+
+    if(ptr == NULL)
+    {
+        printf("ERROR ! Cannot allocate Memory");
+    }//end if
+
+    else
+        {
+        printf("Enter %d elements\n",elements);
+
+    for(i=0;i<elements;i++)
+    {
+        scanf("%d",&*(ptr + i));
+    }// end for1
+
+    for(i=0;i<elements;i++)
+    {
+        printf("%d \n", *(ptr + i));
+    }//end for
+
+    temp = ptr;
+
+    printf("\nenter the NEW number of elements:");
+    scanf("%d", &elements);
+
+    size_of_bytes = elements * sizeof(int);
+    ptr = (int*) realloc(ptr,size_of_bytes);
+
+    if(ptr == NULL)
+    {
+        printf("ERROR ! Cannot allocate Memory");
+    }//end if
+
+    else
+        {
+        printf("Enter %d elements\n",elements);
+
+    for(i=0;i<elements;i++)
+    {
+        scanf("%d",&*(ptr + i));
+    }// end for1
+
+    for(i=0;i<elements;i++)
+    {
+        printf("%d \n", *(ptr + i));
+    }//end for
+
+
+
+    free(ptr);
+
+        }//end else
+        }
+
+
+}//end main()

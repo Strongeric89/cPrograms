@@ -1,0 +1,59 @@
+/*Write a program that uses a 3x2 array*/
+#include<stdio.h>
+#define ROW 3
+#define COL 2
+main()
+{
+    int numbers[ROW][COL];
+    int i=0;
+    int j=0;
+
+    int sum[ROW][COL]={0,};
+
+    //populate the array
+    printf("Please enter a number to the array postions");
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+            printf("\nfor the array numbers positions (%d, %d)", i,j);
+            scanf("%d", &numbers[i][j]);
+
+        }//end inner loop
+
+    }//end outter loop
+
+    for(i=0;i<ROW;i++)
+    {
+        for(j=0;j<COL;j++)
+        {
+            sum[i][j]= sum[i][j] + numbers[i][j];
+            printf("\nfor the array numbers positions (%d, %d) you entered: %d ", i,j, numbers[i][j]);
+
+        }//end inner loop
+
+    }//end outter loop
+
+
+
+
+    for(i=0;i<ROW;i++)
+    {
+        sum[i][i]= sum[i][i] + numbers[i][i];
+
+        printf("\nthe sum of Row%d is %d",i,sum[i]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}//end main()

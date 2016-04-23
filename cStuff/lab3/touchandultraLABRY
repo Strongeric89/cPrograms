@@ -1,0 +1,35 @@
+#pragma config(Sensor,S1,touchSensor,sensorTouch)
+#pragma config(Sensor, S4,sonarSensor,sensorSONAR)
+
+
+task main()
+{
+	Int I = 0;
+while(i==0)
+{
+	while(SensorValue(sonarsensor) > 25)
+	{
+		motor[motorC] =50;//left motor
+		motor[motorB] =50;//right motor
+		
+		if(SensorValue(touchSensor)==1)
+{
+			motor[motorC] =- 50;//left motor
+			motor[motorB] = -50;//right motor
+			wait1msec(1000);
+}//end if
+	}//end while
+		
+		motor[motorC] = -50;//left motor
+		motor[motorB] = -50;//right motor
+		wait1Msec(1000);
+
+		motor[motorC] = -17;//left motor
+		motor[motorB] = 17;//right motor
+		wait1Msec(1000);
+		
+		I =I + 1;
+	}//end while
+		I = 0;
+		
+}//end main

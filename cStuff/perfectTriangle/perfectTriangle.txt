@@ -1,0 +1,21 @@
+/*The sum of any two sides is greater than the 3rd side to form a triangle. the following program will ask for 3 numbers and
+check if the 3 numbers make up a triangle*/
+
+#include<stdio.h>
+main()
+{
+    int side1,side2,side3;
+
+    printf("enter the sizes of the 3 sides to check if its a valid triangle:\n");
+    scanf("%d%d%d",&side1,&side2,&side3);
+
+    if(side1 + side2 > side3 || side2 + side1 > side3)
+    {
+        printf("The numbers entered make a valid triangle\n");
+    }//end if
+    else
+    {
+        printf("The numbers entered do not make a valid triangle");
+    }//end else
+
+}//end main()

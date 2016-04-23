@@ -1,0 +1,26 @@
+#include<stdio.h>
+#define  SIZE 5
+
+main()
+{
+
+    char name[SIZE];
+
+    int i,j;
+
+    printf("enter your name:\n");
+
+    for(i=0;i<SIZE;i++){
+        scanf("%c", &name[i]);
+    }//end for 1
+
+    for(j=SIZE;j>=0;j--){
+            printf("%c",name[j]);
+    }
+
+
+
+
+
+
+}//end main()

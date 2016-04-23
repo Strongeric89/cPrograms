@@ -1,0 +1,63 @@
+The team of Eric and Craig. T4.... 
+
+After some introductions and group forming we were assigned our robot
+We signed in our robot and followed instructions to build the robot to the technical specification. 
+We ran into some problems here: 
+-we were missing many parts,which slowed us down in the building phase but we eventually got the parts together to complete the build. We were missing components such as the Ac adapter and small lego components . 
+
+Once the robot was complete, we update the firmware and downloaded some sample programs to ensure its functionality. 
+We got the robot to move backwards and forwards. 
+
+Next we sat down and designed the logic for the robot to perform a square 
+<insert image>
+We then began to create our own program for the robot to do a circle and create a square. we use the following logic. 
+<insert code>
+
+Circle-----
+/*the following program is for Lab 1. Lets move the robot CIRCLE*/
+task main()
+{
+
+	int i=0; // counter for for loop
+	for(i=0;i<5;i++)
+	{
+
+	// moves forword 25
+	motor[motorB] =50; // power is 0 B=RIGHT
+	motor[motorC] =25; //power is 0  C=LEFT
+	wait1Msec(7000); // 1 seconds
+
+	}//end for // runs 5 times
+}//end main
+
+
+Square-----
+/*the following program is for Lab 1. Lets move the robot forward and turn in a square shape within an infinite loop*/
+task main()
+{
+
+	int i=0;// counter for for loop
+	int k=0;// counter for while loop
+
+	while(k==0)
+	{
+		for(i=0;i<4;i++)
+		{
+
+		// moves forword 25
+		motor[motorB] =25; //  B=RIGHT
+		motor[motorC] =25; //  C=LEFT
+		wait1Msec(3000); // 3 seconds
+
+		//turns right
+		motor[motorB] =25; // B=RIGHT
+		motor[motorC] =-25; //C=LEFT
+		wait1Msec(665); // 3 seconds
+
+		}//end for
+	}//end while // this will run in an infinite loop
+
+}//end main
+
+
+Overall the lab was a success. We completed all tasks, built a great robot that was fully functioning. We performed great as a group, designating tasks to each other to ensure time management of the Lab. 

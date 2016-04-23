@@ -1,0 +1,16 @@
+/*Calculate the sum of 1-10 using a while loop,*/
+#include <stdio.h>
+main()
+{
+    int i=1;
+    int sum=0;
+
+    while(i<11){
+
+            sum=sum+i;
+            i ++;
+    }// end while
+    printf("The sum of 1-10 is %d", sum);
+}//end main
+
+

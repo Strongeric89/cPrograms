@@ -1,0 +1,70 @@
+/*The following program using pointer notation, pouplates an array copies to the second and a bubble sort algorithm sorts the smalles, largest and average number of the arrays*/
+#include<stdio.h>
+#define SIZE 5
+
+main()
+{
+    float array1[SIZE]= {0};
+    float array2[SIZE]= {0};
+    float *ptrArray1 = &array1[SIZE];
+    int i,j;
+
+    printf("Populate the array\n");
+
+    float lowest = 10;
+    float highest=0;
+    float total = 0;
+    float *ptrTotal = &total;
+    float *ptrLowest = &lowest;
+    float *ptrHighest = &highest;
+
+
+
+    for(i=0;i<SIZE;i++)
+    {
+        scanf("%f", &*(array1 + i));
+
+        *ptrTotal = *ptrTotal + *(array1 + i) / SIZE;
+
+
+         if( *(array1 + i) < *ptrLowest)
+        {
+            *ptrLowest = *(array1 + i);
+        }//end if
+
+        if( *(array1 + i) > *ptrHighest)
+        {
+            *ptrHighest = *(array1 + i);
+        }//end if
+    }
+
+
+        printf("The lowest element in the array is %.2f\n", *ptrLowest);
+        printf("The highest element in the array is %.2f\n", *ptrHighest);
+        printf("The  average number of the array is %.2f\n", *ptrTotal);
+
+
+        for(i=0,j=4;i<5,j<0;i++,j--)
+        {
+
+        *(array2 + j) = *(array1 + i);
+
+        }//end for
+
+
+         for(i=0,j=0;i<SIZE,j<SIZE;i++,j++)
+        {
+        printf("\nThe element %d of array1 is %.2f\nThe element %d of array2 is %.2f\n ",i,*(array1 + i), j, *(array2 + j));
+
+        }//end for
+
+
+
+
+
+
+
+
+
+
+}//end main()
