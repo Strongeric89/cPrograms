@@ -27,6 +27,6 @@ main()
     }//end for
 
 
-
+getch();
 
 }//end main

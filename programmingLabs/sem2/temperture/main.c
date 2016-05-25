@@ -41,6 +41,7 @@ main()
     kelvinTemp = average_Cel; //passing the value for correctness.
 
     printf("\nThe Kelvin Tempreture is %.2f",kelvinTemp);
+    getch();
 
 }//end main()
 

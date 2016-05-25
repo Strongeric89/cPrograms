@@ -1,0 +1,3 @@
+C:\Users\Eric\Documents\GitHub\cPrograms\cStuff\lab2\test.c:1:1: error: 'task' does not name a type
+ task main()
+ ^

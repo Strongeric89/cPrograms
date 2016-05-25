@@ -14,4 +14,6 @@ main()
 
  }//end while
 
+ getch();
+
 }//end main()
